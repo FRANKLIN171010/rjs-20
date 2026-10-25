@@ -5,76 +5,125 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f2f5f9;
-  color: #222;
+  background: #f4f7fb;
+  color: #263238;
 }
 
-header {
+.navbar {
   background: #243b55;
   color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-nav {
   display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
 }
 
-nav a {
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  margin-left: 20px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.navbar a:hover,
+.blog-nav a:hover {
+  color: #79d4ff;
 }
 
-.content {
-  max-width: 750px;
-  margin: 30px auto;
-  padding: 25px;
-  background: white;
-  border-radius: 8px;
-  line-height: 1.7;
+.home-page {
+  text-align: center;
+  padding: 90px 20px;
 }
 
-.post-list li {
-  margin: 12px 0;
+.home-page h1 {
+  color: #1769aa;
+  font-size: 36px;
 }
 
-.post-list a {
-  color: #1756a9;
-  text-decoration: none;
-}
-
-.post-list a:hover {
-  text-decoration: underline;
+.home-page p {
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
 
 .button {
   display: inline-block;
-  background: #243b55;
+  background: #1769aa;
   color: white;
-  padding: 10px 18px;
-  border-radius: 5px;
+  padding: 12px 22px;
+  border-radius: 6px;
   text-decoration: none;
 }
 
-footer {
-  background: #243b55;
-  color: white;
-  padding: 15px;
+.blog-layout {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.blog-layout header {
   text-align: center;
-  margin-top: 40px;
+}
+
+.blog-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.blog-nav a {
+  color: #1769aa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-content {
+  padding: 25px 0;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.post-card h3 {
+  color: #1769aa;
+}
+
+.post-card p,
+.blog-content p {
+  line-height: 1.8;
+}
+
+.post-card a {
+  color: #1769aa;
+  font-weight: bold;
 }
 
 @media (max-width: 600px) {
-  .content {
-    margin: 15px;
-    padding: 18px;
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar a {
+    margin: 0 10px;
+  }
+
+  .home-page {
+    padding: 50px 20px;
   }
 }
